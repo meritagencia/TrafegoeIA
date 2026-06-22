@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MDLHX9NX');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Imersão - Seleção Exclusiva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDLHX9NX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="container">
+        <!-- Logo Header -->
+        <header class="header">
+            <!-- Placeholder for Logo -->
+            <div class="logo">
+                <h1>Tráfego Pago + IA</h1>
+                <p>C U R S O</p>
+            </div>
+        </header>
+
+        <!-- Funnel Container -->
+        <main class="funnel-container" id="funnel">
+            
+            <!-- Welcome Step (Step 0) -->
+            <section class="step active" id="step-0">
+                <h2>PARABÉNS!</h2>
+                <p>Você deu o primeiro passo para estar conosco presencialmente.</p>
+                <p>Somos uma empresa especializada em Marketing, uma das maiores do Centro-Oeste em treinamentos presenciais.</p>
+                <p>Estamos selecionando pessoas que querem escalar seus resultados.</p>
+                <p>Precisamos te conhecer para entender se a nossa imersão faz sentido para você. Tudo o que você compartilhar será tratado com total confidencialidade.</p>
+                <p>Nos vemos em breve!</p>
+                <button type="button" class="btn btn-primary" onclick="nextStep(1)">➡️ COMEÇAR</button>
+            </section>
+
+            <!-- Step 1: Instagram -->
+            <section class="step" id="step-1">
+                <h2>Qual é o seu @ no Instagram?</h2>
+                <div class="input-group">
+                    <input type="text" id="instagram" placeholder="Ex: @seunome" class="text-input" autocomplete="off">
+                </div>
+                <div class="error-msg" id="error-1">Por favor, preencha este campo.</div>
+                <div class="actions">
+                    <button type="button" class="btn btn-secondary" onclick="prevStep(0)">Voltar</button>
+                    <button type="button" class="btn btn-primary" onclick="validateAndNext(1, 2)">Continuar</button>
+                </div>
+            </section>
+
+            <!-- Step 2: Perfil -->
+            <section class="step" id="step-2">
+                <h2>Qual das opções abaixo melhor descreve você hoje?</h2>
+                <div class="radio-group" id="group-perfil">
+                    <label class="radio-label">
+                        <input type="radio" name="perfil" value="empresario_equipe">
+                        <span class="custom-radio"></span>
+                        Sou empresário(a) e tenho meu próprio negócio
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="perfil" value="empresario_sozinho">
+                        <span class="custom-radio"></span>
+                        Sou empresário(a) e trabalho sozinho(a)
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="perfil" value="gestor">
+                        <span class="custom-radio"></span>
+                        Sou gestor de tráfego/freelancer
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="perfil" value="clt">
+                        <span class="custom-radio"></span>
+                        Sou CLT/empregado
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="perfil" value="outro">
+                        <span class="custom-radio"></span>
+                        Outro
+                    </label>
+                </div>
+                <div class="error-msg" id="error-2">Por favor, selecione uma opção.</div>
+                <div class="actions">
+                    <button type="button" class="btn btn-secondary" onclick="prevStep(1)">Voltar</button>
+                    <button type="button" class="btn btn-primary" onclick="validateAndNext(2, 3)">Continuar</button>
+                </div>
+            </section>
+
+            <!-- Step 3: Tamanho da Equipe -->
+            <section class="step" id="step-3">
+                <h2>Hoje, quantas pessoas trabalham no seu negócio (incluindo você)?</h2>
+                <div class="radio-group" id="group-equipe">
+                    <label class="radio-label">
+                        <input type="radio" name="equipe" value="apenas_eu">
+                        <span class="custom-radio"></span>
+                        Apenas eu
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="equipe" value="2_a_5">
+                        <span class="custom-radio"></span>
+                        2 a 5 pessoas
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="equipe" value="6_a_10">
+                        <span class="custom-radio"></span>
+                        6 a 10 pessoas
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="equipe" value="mais_10">
+                        <span class="custom-radio"></span>
+                        Mais de 10 pessoas
+                    </label>
+                </div>
+                <div class="error-msg" id="error-3">Por favor, selecione uma opção.</div>
+                <div class="actions">
+                    <button type="button" class="btn btn-secondary" onclick="prevStep(2)">Voltar</button>
+                    <button type="button" class="btn btn-primary" onclick="validateAndNext(3, 4)">Continuar</button>
+                </div>
+            </section>
+
+            <!-- Step 4: Tráfego Pago -->
+            <section class="step" id="step-4">
+                <h2>Seu negócio já anuncia ou investiu em tráfego pago?</h2>
+                <div class="radio-group" id="group-trafego">
+                    <label class="radio-label">
+                        <input type="radio" name="trafego" value="nunca">
+                        <span class="custom-radio"></span>
+                        Nunca investi
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="trafego" value="impulsionei">
+                        <span class="custom-radio"></span>
+                        Já impulsionei publicações
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="trafego" value="gerenciador">
+                        <span class="custom-radio"></span>
+                        Já usei o Gerenciador de Anúncios do Meta
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="trafego" value="agencia">
+                        <span class="custom-radio"></span>
+                        Tenho agência ou gestor de tráfego
+                    </label>
+                </div>
+                <div class="error-msg" id="error-4">Por favor, selecione uma opção.</div>
+                <div class="actions">
+                    <button type="button" class="btn btn-secondary" onclick="prevStep(3)">Voltar</button>
+                    <button type="button" class="btn btn-primary" onclick="validateAndNext(4, 5)">Continuar</button>
+                </div>
+            </section>
+
+            <!-- Step 5: Disponibilidade -->
+            <section class="step" id="step-5">
+                <h2>Nossa turma acontece em horário comercial de seg a sex. Você tem disponibilidade para participar das aulas?</h2>
+                <div class="radio-group" id="group-disponibilidade">
+                    <label class="radio-label">
+                        <input type="radio" name="disponibilidade" value="sim">
+                        <span class="custom-radio"></span>
+                        Sim, tenho disponibilidade
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="disponibilidade" value="nao">
+                        <span class="custom-radio"></span>
+                        Não tenho disponibilidade
+                    </label>
+                </div>
+                <div class="error-msg" id="error-5">Por favor, selecione uma opção.</div>
+                <div class="actions">
+                    <button type="button" class="btn btn-secondary" onclick="prevStep(4)">Voltar</button>
+                    <button type="button" class="btn btn-primary" onclick="evaluateAndProceed()">Continuar</button>
+                </div>
+            </section>
+
+            <!-- Step Final (Only for Qualified) -->
+            <section class="step" id="step-final">
+                <h2>Parabéns! Pelo seu perfil, você pode participar desta turma exclusiva para empresários.</h2>
+                
+                <!-- UTM Hidden Fields -->
+                <input type="hidden" id="utm_source" name="utm_source" value="">
+                <input type="hidden" id="utm_medium" name="utm_medium" value="">
+                <input type="hidden" id="utm_campaign" name="utm_campaign" value="">
+                <input type="hidden" id="utm_term" name="utm_term" value="">
+                <input type="hidden" id="utm_content" name="utm_content" value="">
+
+                <div class="input-group">
+                    <label for="nome">Qual é o seu nome completo?</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome..." class="text-input" autocomplete="name">
+                </div>
+                <div class="input-group">
+                    <label for="whatsapp">Qual é o seu WhatsApp com DDD?</label>
+                    <input type="tel" id="whatsapp" placeholder="Ex: (11) 99999-9999" class="text-input" autocomplete="tel">
+                </div>
+                <div class="error-msg" id="error-final">Por favor, preencha todos os campos.</div>
+                <div class="actions" style="margin-top: 30px;">
+                    <button type="button" class="btn btn-primary btn-large" onclick="submitLead()">Quero falar no WhatsApp e garantir minha vaga</button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
